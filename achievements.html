@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS from bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- my logo icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img\my-black-logo.png" />
+
+    <!-- my css file -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- my font-awsome link -->
+    <script src="https://kit.fontawesome.com/9dd10fc461.js" crossorigin="anonymous"></script>
+
+    <title>Rizal De Studio</title>
+</head>
+<body>
+
+    <div class="container p-4 my-5 text-center">
+        <h1 id="headline">Achievements and Certificates I've Ever Had</h1>
+        <div class="row g-3 mt-5">
+            <div class="col-sm-3">
+                <img src="/img/achievements/PEMROGRAMAN DASAR WEB.jpg" alt="pemrograman_dasar_web" width="250">
+                <p class="text-muted mt-2 text-center"><small>Pemrograman Dasar Web</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/FRONT END WEB DASAR.jpg" alt="front_end_web_dasar" width="250">
+                <p class="text-muted mt-2 text-center"><small>Front-End Web Dasar</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/BACK END WEB DASAR.jpg" alt="back_end_web_dasar" width="250">
+                <p class="text-muted mt-2 text-center"><small>Back-End Web Dasar</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/CLOUD FUNDAMENTAL AWS.jpg" alt="Cloud_fundamental_aws" width="250">
+                <p class="text-muted mt-2 text-center"><small>Cloud Fundamental AWS</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/ARCHITECTING ON AWS.jpg" alt="ARCHITECTING_ON_AWS" width="250">
+                <p class="text-muted mt-2 text-center"><small>Architecting On AWS</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/ARCHITECTING COMPUTE ENGINE.jpg" alt="ARCHITECTING_COMPUTE_ENGINE" width="250">
+                <p class="text-muted mt-2 text-center"><small>Architecting Compute Engine</small></p>
+            </div> 
+            <div class="col-sm-3">
+                <img src="/img/achievements/IT SUPPORT.jpg" alt="IT_SUPPORT" width="250">
+                <p class="text-muted mt-2 text-center"><small>Google IT Support</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/DATA GOOGLE CLOUD.jpg" alt="data_google_cloud" width="250">
+                <p class="text-muted mt-2 text-center"><small>Data Google Cloud</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/IT AUTOMATION WITH PYTHON.jpg" alt="it_automation_with_python" width="250">
+                <p class="text-muted mt-2 text-center"><small>Google IT Automation With Python</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/PANITIA.jpg" alt="PANITIA_DM" width="250">
+                <p class="text-muted mt-2 text-center"><small>Panitia PKKMB 2019</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/ROBOTIK.jpg" alt="Robotika" width="250">
+                <p class="text-muted mt-2 text-center"><small>Panitia Robotika</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/YOT_SBY.jpg" alt="Robotika" width="250">
+                <p class="text-muted mt-2 text-center"><small>Staff PGA YOT Surabaya</small></p>
+            </div>
+            <div class="col-sm-3">
+                <img src="/img/achievements/JUNIOR WEB DEV.jpg" alt="junior_web_dev" width="250">
+                <p class="text-muted mt-2 text-center"><small>Junior Web Dev - BNSP</small></p>
+            </div>
+            
+        </div>
+    </div>
+    
+     <!-- JavaScript from bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+     <!-- place your javascript functional here -->
+     <script>
+         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+ 
+         const sendMessage = () => {
+             document.location.href = 'https://wa.me/6285733721962?text=Hi%20Rizal%20Fathurrahman';
+         }
+ 
+         let intern = document.getElementById('internship');
+         intern.addEventListener('click', function(){
+             document.location.href = '/internship';
+         });
+ 
+         document.getElementById('portfolio').addEventListener('click', function(){
+             alert('Sorry, content is not available yet');
+         });
+         document.getElementById('work-project-1').addEventListener('click', function(){
+             alert('Sorry, content is not available yet');
+         });
+         document.getElementById('final-project').addEventListener('click', function(){
+             alert('Sorry, content is not available yet');
+         });
+ 
+         
+     </script>
+</body>
+</html>
