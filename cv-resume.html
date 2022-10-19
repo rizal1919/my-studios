@@ -29,15 +29,15 @@
         <h1 id="headline">Tailor Your CV</h1>
     </div>
     <form action="http://localhost:8080/my-app/export.php" method="post">
-    <div class="container col-lg-8 my-5">
+    <div class="container col-lg-12 my-5">
         <div class="row g-3 mb-3">
-            <label for="name" class="col-sm-3 col-form-label col-form-label-sm fw-bold text-end">Nama Lengkap</label>
+            <label for="name" class="col-sm-3 col-form-label col-form-label-sm fw-bold text-start">Nama Lengkap</label>
             <div class="col-sm-9">
                 <input type="text" class="form-control form-control-sm" value="Rizal Fathurrahman" placeholder="name" id="name" name="name">
             </div>
         </div>
         <div class="row g-3 mb-3">
-            <label for="name" class="col-sm-3 col-form-label col-form-label-sm fw-bold text-end">Alamat</label>
+            <label for="name" class="col-sm-3 col-form-label col-form-label-sm fw-bold text-start">Alamat</label>
             <div class="col-sm-3">
                 <input type="text" class="form-control form-control-sm" value="Gresik" placeholder="city" id="city" name="city">
             </div>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="row g-3 mb-3">
-            <label for="name" class="col-sm-3 col-form-label col-form-label-sm fw-bold text-end">Informasi Kontak</label>
+            <label for="name" class="col-sm-3 col-form-label col-form-label-sm fw-bold text-start">Informasi Kontak</label>
             <div class="col-sm-3">
                 <input type="email" class="form-control form-control-sm" value="hirizal01@gmail.com" placeholder="email" id="email" name="email">
             </div>
@@ -61,32 +61,96 @@
             </div>
         </div>
         <div class="row g-3 mb-3">
-            <label for="body" class="col-sm-3 col-form-label col-form-label-sm fw-bold text-end">Profile Resume</label>
+            <label for="body" class="col-sm-3 col-form-label col-form-label-sm fw-bold text-start">Profile Resume</label>
             <div class="col-sm-9">
                 <input type="hidden" id="body" name="body">
                 <trix-editor input="body"></trix-editor>
             </div>
         </div>
         <div id="education">
-            <div class="row g-3" id="ed1">
-                <label for="school" class="col-sm-3 col-form-label col-form-label-sm text-end fw-bold">Pendidikan</label>
-                <div class="col-sm-3">
-                    <input type="text" class="form-control form-control-sm" name="jurusan1" placeholder="jurusan" value="Teknik Komputer">
+            <div id="ed1">
+                <div class="row g-3">
+                    <label for="school" class="col-sm-3 col-form-label col-form-label-sm text-start fw-bold">Pendidikan</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control form-control-sm" name="jurusan1" placeholder="jurusan" value="Teknik Komputer">
+                    </div>
+                    <div class="col-sm-2">
+                        <select name="jenjang1" class="form-select form-select-sm" id="jenjang1">
+                            <option value="SMA">SMA/SMK</option>
+                            <option value="S1" selected>S1</option>
+                            <option value="S2">S2</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm" name="nama_sekolah1" placeholder="nama_sekolah" value="Institut Teknologi Telkom Surabaya">
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="text" class="form-control form-control-sm" name="ipk/nilai_rata_rata1" placeholder="ipk/nilai_rata_rata" value="3.89">
+                    </div>
+                    <div class="col-sm-1">
+                        <p class="btn btn-dark btn-sm" id="add">Tambah</p>
+                    </div>
                 </div>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control form-control-sm" name="nama_sekolah1" placeholder="nama_sekolah" value="Institut Teknologi Telkom Surabaya">
+                <div class="row g-3 mb-3">
+                    <label for="school" class="col-sm-3 col-form-label col-form-label-sm text-start fw-bold" style="visibility: hidden;">Pelajaran</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="pelajaran" id="pelajaran" class="form-control form-control-sm" placeholder="pelajaran" value="Pemrograman Dasar, Pemrograman dan Algoritma, Jaringan Komputer, Manajamen Proyek">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="date" name="date1.1" id="date1" class="form-control form-control-sm" placeholder="date1" value="2018-10-01">
+                    </div>
+                    <div class="col-sm-1">
+                        <p class="text-center">Sampai</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="date" name="date1.2" id="date2" class="form-control form-control-sm" placeholder="date2" value="2022-08-01">
+                    </div>
                 </div>
-                <div class="col-sm-1">
-                    <input type="text" class="form-control form-control-sm" name="ipk/nilai_rata_rata1" placeholder="ipk/nilai_rata_rata" value="3.89">
+            </div>
+        </div>
+        <hr>
+        <div id="work">
+            <div id="w1">
+                <div class="row g-3">
+                    <label for="pekerjaan" class="col-sm-3 col-form-label col-form-label-sm text-start fw-bold">Pengalaman</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="posisi1" id="posisi1" class="form-control form-control-sm" placeholder="posisi1">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" name="perusahaan1" id="perusahaan1" placeholder="perusahaan1" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="date" name="dateWork1_1" id="dateWork1_1" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-sm-1">
+                        <p class="text-center">Sampai</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="date" name="dateWork1_2" id="dateWork1_2" class="form-control form-control-sm">
+                    </div>
                 </div>
-                <div class="col-sm-1">
-                    <p class="btn btn-dark btn-sm" id="add">+ Add</p>
+                <div class="row g-3 mb-3">
+                    <label for="pekerjaan" class="col-sm-3 col-form-label col-form-label-sm" style="visibility: hidden;"></label>
+                    <div class="col-sm-8">
+                        <input type="text" name="nama_project1" id="nama_project1" placeholder="nama_project1" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-sm-1">
+                        <p class="btn btn-dark btn-sm" id="addWork">Tambah</p>
+                    </div>
+                </div>
+                <div class="row g-3 mb-3">
+                    <label for="pekerjaan" class="col-sm-3 col-form-label col-form-label-sm" style="visibility: hidden;"></label>
+                    <div class="col-sm-9">
+                        <input type="hidden" id="jobDesc1" name="jobDesc1">
+                        <trix-editor input="jobDesc1" placeholder="Jobdesc selama bekerja ..."></trix-editor>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="text-center mt-5">
             <button class="btn btn-dark col-sm-2">Submit</button>
         </div>
+
         
     </div>
     </form>
@@ -95,117 +159,8 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
      <!-- place your javascript functional here -->
-     <script>
-         
-        // to hiding upload files icon
-        document.addEventListener('trix-file-accept', function(e){
-            e.preventDefault();
-        })
-
-        let ed = document.getElementById('education');
-        ed.setAttribute('data', '1');
-
-        document.getElementById('add').addEventListener('click', function(e){
-
-            let know = ed.getAttribute('data');
-            console.log('Sebelum' + know);
-            know = Number(know) + 1;
-            ed.setAttribute('data', know);
-            console.log('Sesudah' + know);
-            
-            // ed.setAttribute('data', know);
-
-            const container = document.createElement('div');
-            container.classList.add('row');
-            container.classList.add('g-3');
-            container.setAttribute('id', 'ed' + know);
-
-            // label
-            const label = document.createElement('label');
-            label.classList.add('col-sm-3');
-            label.classList.add('col-form-label');
-            label.classList.add('col-form-label-sm');
-
-
-            // div pertama
-            const childContainer1st = document.createElement('div');
-            childContainer1st.classList.add('col-sm-3');
-
-            const childOfContainer1st = document.createElement('input');
-            childOfContainer1st.setAttribute('type', 'text');
-            childOfContainer1st.setAttribute('placeholder', 'jurusan');
-            childOfContainer1st.classList.add('form-control');
-            childOfContainer1st.classList.add('form-control-sm');
-            childOfContainer1st.setAttribute('name', 'jurusan' + know);
-
-            childContainer1st.appendChild(childOfContainer1st);
-
-            // div kedua
-            const childContainer2nd = document.createElement('div');
-            childContainer2nd.classList.add('col-sm-4');
-
-            const childOfContainer2nd = document.createElement('input');
-            childOfContainer2nd.setAttribute('type', 'text');
-            childOfContainer2nd.setAttribute('placeholder', 'nama_sekolah');
-            childOfContainer2nd.classList.add('form-control');
-            childOfContainer2nd.classList.add('form-control-sm');
-            childOfContainer2nd.setAttribute('name', 'nama_sekolah' + know);
-
-            
-            childContainer2nd.appendChild(childOfContainer2nd);
-
-            // div ketiga
-            const childContainer3rd = document.createElement('div');
-            childContainer3rd.classList.add('col-sm-1');
-
-            const childOfContainer3rd = document.createElement('input');
-            childOfContainer3rd.setAttribute('type', 'text');
-            childOfContainer3rd.setAttribute('placeholder', 'ipk/nilai_rata_rata');
-            childOfContainer3rd.classList.add('form-control');
-            childOfContainer3rd.classList.add('form-control-sm');
-            childOfContainer3rd.setAttribute('name', 'ipk/nilai_rata_rata' + know);
-            
-            childContainer3rd.appendChild(childOfContainer3rd);
-
-            // div keempat - button ad
-            const childContainer4th = document.createElement('div');
-            childContainer4th.classList.add('col-sm-1');
-
-            const childOfContainer4th = document.createElement('p');
-            childOfContainer4th.classList.add('btn');
-            childOfContainer4th.classList.add('btn-danger');
-            childOfContainer4th.classList.add('btn-sm');
-            childOfContainer4th.innerText = "Cancel";
-            childOfContainer4th.setAttribute('id', 'add');
-            eds = 'ed' + know;
-            // console.log(eds);
-            childOfContainer4th.setAttribute('onclick', `hapusSlot('${eds}')`);
-            // childOfContainer4th.style.visibility = 'hidden';
-            
-            childContainer4th.appendChild(childOfContainer4th);
-
-            // merging elements
-            container.appendChild(label);
-            container.appendChild(childContainer1st);
-            container.appendChild(childContainer2nd);
-            container.appendChild(childContainer3rd);
-            container.appendChild(childContainer4th);
-
-            // attached to education
-            ed.appendChild(container);
-
-            console.log(container);
-
-            
-            
-        })
-
-        function hapusSlot(id){
-            // console.log(id);
-            const me = document.getElementById(id);
-            me.style.display = 'none';
-        }
-         
-     </script>
+     <script src="js/education.js"></script>
+     <script src="js/work.js"></script>
+     <script src="js/function.js"></script>
 </body>
 </html>
